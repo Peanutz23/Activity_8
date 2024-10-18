@@ -1,0 +1,21 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install required packages for Nagios
+  apt:
+    name:
+      - nagios3
+      - nagios-nrpe-plugin
+      - apache2
+      - php
+      - libapache2-mod-php
+      - php-gd
+    state: present
+
+- name: Start and enable Nagios service
+  systemd:
+    name: nagios3
+    state: started
+    enabled: yes

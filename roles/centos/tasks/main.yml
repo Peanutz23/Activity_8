@@ -1,0 +1,21 @@
+---
+- name: Install EPEL repository
+  yum:
+    name: epel-release
+    state: present
+
+- name: Install required packages
+  yum:
+    name:
+      - nagios
+      - nagios-plugins-all
+      - httpd
+      - php
+      - php-gd
+    state: present
+
+- name: Start and Enable nagios services
+  service:
+    name: nagios
+    state: started
+    enabled: yes

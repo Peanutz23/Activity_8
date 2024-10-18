@@ -1,13 +1,9 @@
-[web_servers]
-Server1 ansible_host=192.168.56.142 ansible_user=justin 
+[Ubuntu]
 
-[db_servers]
-server2 ansible_host=192.168.56.149 ansible_user=jdalena
-
-
-[file_servers]
+Server1 ansible_host=192.168.56.142 ansible_user=justin
 Server3 ansible_host=192.168.56.143 ansible_user=justin
 
-[workstations]
-Server1 ansible_host=192.168.56.142 ansible_user=justin
+[Centos]
+
+server2 ansible_host=192.168.56.149 ansible_user=jdalena
 
